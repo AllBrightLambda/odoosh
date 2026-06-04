@@ -101,14 +101,14 @@ echo "  ✓ Ownership set to $ODOO_USER."
 # ── 4. Update addons_path in config ──────────
 echo "[4/5] Updating addons_path in odoo.conf..."
 
-# Build new addons_path with enterprise first
-NEW_ADDONS="$ENTERPRISE_DIR,$ODOO_DIR/odoo/addons,$ODOO_DIR/custom-module"
+# # Build new addons_path with enterprise first
+# NEW_ADDONS="$ENTERPRISE_DIR,$ODOO_DIR/odoo/addons,$ODOO_DIR/custom-module"
 
-# Replace existing addons_path line
-sudo sed -i "s|^addons_path.*|addons_path = $NEW_ADDONS|" $CONF_FILE
+# # Replace existing addons_path line
+# sudo sed -i "s|^addons_path.*|addons_path = $NEW_ADDONS|" $CONF_FILE
 
-echo "  ✓ addons_path updated:"
-echo "    $NEW_ADDONS"
+# echo "  ✓ addons_path updated:"
+# echo "    $NEW_ADDONS"
 
 # ── 5. Restart & update database ─────────────
 echo "[5/5] Restarting Odoo and updating database..."
